@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo start time $(date)
+
+for N in {1..5}
+do
+  echo counter $N
+  ./paramsInFilenameWithTriggerWriteToFile.py 35 -3.1 8000 backporchjuly2$N.csv
+done
+
+echo "========================== $0 Done ============================"
+
+
+############################################################
+exit
+
+

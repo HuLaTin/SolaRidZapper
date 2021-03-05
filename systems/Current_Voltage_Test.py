@@ -13,7 +13,7 @@ loginData = {'mailuid':'rice', 'pwd':'rice','login-submit':''}
 r = requests.post('http://69.4.196.7/solarid/includes/login.inc.php', loginData)
 html = etree.HTML(r.text)
 
-webSensorID = "42"
+webSensorID = "43"
 identifier = "ident"
 
 find = etree.XPath("//table/tr[td[1]/text() = "+ webSensorID +"]/td/text()")

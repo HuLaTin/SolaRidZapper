@@ -1,0 +1,5 @@
+outFile  params,150,10000,iLikeBigBugsRun2.csv
+ A trigger occurred start the counter
+ A trigger occurred start the counter
+listToFile rows:  16473
+subList rows:  10000

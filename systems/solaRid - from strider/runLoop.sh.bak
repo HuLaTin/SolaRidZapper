@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+  echo Command line argument are required, see examples.
+  echo General syntax
+  echo $0 loopCount fileStem
+  echo $0 42 iLikeBigBugs
+  exit
+fi
+
+echo start time $(date)
+
+#exit
+
+for (( N = 1; N <= $1; N++ ))
+do
+  echo counter $N
+  ./paramsInFilenameWithTriggerWriteToFile.py 35 -3.1 8000 $2Run$N.csv
+done
+
+echo "========================== $0 Done ============================"
+
+
+############################################################
+exit
+
+
