@@ -4,10 +4,10 @@ import pandas as pd
 import plotly.express as px
 
 
-df = pd.read_csv(r'Data\GasStreamv1.csv', header=None)
+df = pd.read_csv(r'Data\2021Apr25--G-Z47H4V.csv', header=None)
 # rename columns in "sensorData"
 df.columns = ("Time", "MQ2_ADC", "MQ3_ADC", "MQ4_ADC", "MQ5_ADC",
-                          "MQ6_ADC", "MQ7_ADC", "MQ8_ADC", "MQ135_ADC", "CPU_Load", "Throttled")
+                          "MQ6_ADC", "MQ7_ADC", "MQ8_ADC", "MQ135_ADC", "Temp", "Gas", "Humidity", "Pressure")
 
 # drops two columns that aren't useful in this application
 del df['CPU_Load']

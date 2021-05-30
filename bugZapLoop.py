@@ -40,6 +40,7 @@ import Adafruit_GPIO.SPI as SPI
 import Adafruit_MCP3008
 from urllib.request import urlopen
 from lxml import etree
+from numpy import mean
 #import LED
 
 # Hardware SPI configuration:
@@ -125,6 +126,7 @@ while True:
         ### Turn LED off ###
         numrows = len(listToFile)
         subList = listToFile[(numrows - maxReads):][:]
+        print(mean(listToFile[(numrows - maxReads):(numrows + linesBeforeTrigger)][:]))
 
         print("listToFile rows: ", numrows)
         print("subList rows: ", len(subList))
