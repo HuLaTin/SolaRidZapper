@@ -48,10 +48,14 @@ while True:
     try:
         sheet.insert_row(values, 2, value_input_option='RAW')
     except:
-        print(when, " Upload failed.")
-        client = gspread.authorize(creds)
-        sheet.insert_row(values, 2, value_input_option='RAW')
-        continue
+        try:
+            print(when, " Upload failed.")
+            client = gspread.authorize(creds)
+            print("Reauthenticating...")
+            sheet.insert_row(values, 2, value_input_option='RAW')
+            print(when, " Upload attempt.")
+            continue
+        except:
+            continue
     finally:
-        #print("Finally")
         time.sleep(30)
